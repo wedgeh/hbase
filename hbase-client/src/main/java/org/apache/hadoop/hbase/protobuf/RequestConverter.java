@@ -491,7 +491,7 @@ public final class RequestConverter {
     builder.setCloseScanner(closeScanner);
     builder.setRegion(region);
     builder.setScan(ProtobufUtil.toScan(scan));
-    builder.setClientHandlesPartials(true);
+    builder.setClientHandlesPartials(false);
     builder.setClientHandlesHeartbeats(true);
     builder.setTrackScanMetrics(scan.isScanMetricsEnabled());
     return builder.build();
@@ -511,7 +511,7 @@ public final class RequestConverter {
     builder.setNumberOfRows(numberOfRows);
     builder.setCloseScanner(closeScanner);
     builder.setScannerId(scannerId);
-    builder.setClientHandlesPartials(true);
+    builder.setClientHandlesPartials(false);
     builder.setClientHandlesHeartbeats(true);
     builder.setTrackScanMetrics(trackMetrics);
     return builder.build();
@@ -534,7 +534,7 @@ public final class RequestConverter {
     builder.setCloseScanner(closeScanner);
     builder.setScannerId(scannerId);
     builder.setNextCallSeq(nextCallSeq);
-    builder.setClientHandlesPartials(true);
+    builder.setClientHandlesPartials(false);
     builder.setClientHandlesHeartbeats(true);
     builder.setTrackScanMetrics(trackMetrics);
     builder.setRenew(renew);
